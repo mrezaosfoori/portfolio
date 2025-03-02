@@ -102,6 +102,8 @@ module.exports = {
             backgroundPosition: "-200% 0",
           },
         },
+
+      
         moveHorizontal: {
           "0%": {
             transform: "translateX(-50%) translateY(-10%)",
