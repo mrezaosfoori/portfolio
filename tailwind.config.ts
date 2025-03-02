@@ -1,16 +1,14 @@
-import type { Config } from "tailwindcss";
-
+const defaultTheme = require("tailwindcss/defaultTheme");
+ 
 const svgToDataUri = require("mini-svg-data-uri");
-
+ 
 const colors = require("tailwindcss/colors");
 const {
   default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette");
-
+ 
 /** @type {import('tailwindcss').Config} */
-
-const config = {
-  darkMode: ["class"],
+module.exports = {
   content: [
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
@@ -18,22 +16,15 @@ const config = {
     "./src/**/*.{ts,tsx}",
     "./data/**/*.{ts,tsx}",
   ],
-  prefix: "",
   theme: {
-    container: {
-      center: true,
-      padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
-    },
     extend: {
       colors: {
         black: {
-          DEFAULT: "#000000",
+          DEFAULT: "#000",
           100: "#000319",
           200: "rgba(17, 25, 40, 0.75)",
           300: "rgba(255, 255, 255, 0.125)",
+          400: "#04080F",
         },
         white: {
           DEFAULT: "#FFF",
@@ -42,7 +33,7 @@ const config = {
         },
         blue: {
           "100": "#E4ECFF",
-          "200": "#E4ECFF",
+          "200": "#333E4E",
         },
         purple: "#CBACF9",
         border: "hsl(var(--border))",
@@ -165,8 +156,8 @@ const config = {
       },
     },
   },
+
   plugins: [
-    require("tailwindcss-animate"),
     addVariablesForColors,
     function ({ matchUtilities, theme }: any) {
       matchUtilities(
@@ -191,17 +182,16 @@ const config = {
       );
     },
   ],
-} satisfies Config;
+}
 
+ 
 function addVariablesForColors({ addBase, theme }: any) {
   let allColors = flattenColorPalette(theme("colors"));
   let newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
   );
-
+ 
   addBase({
     ":root": newVars,
   });
 }
-
-export default config;
