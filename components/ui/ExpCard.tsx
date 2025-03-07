@@ -38,7 +38,7 @@ const ExperienceCard = ({ experience }:any) => {
 
           {/* Skills */}
           <div className="flex flex-wrap gap-2 mb-4 relative z-50 mt-auto ">
-            {experience.skills.map((skill, index) => (
+            {experience.skills.map((skill:string, index:number) => (
               <span
                 key={index}
                 className="text-xs text-gray-300 border border-gray-500 rounded px-2 py-1"
