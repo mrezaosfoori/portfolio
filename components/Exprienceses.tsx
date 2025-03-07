@@ -13,7 +13,7 @@ const Exprienceses = () => {
       </h2>
 
       <div className="w-full mx-auto  flex justify-center gap-8  p-2  ">
-       { expriences.map((item)=><ExperienceCard experience={item} />)}
+       { expriences.map((item,idx)=><ExperienceCard key={idx} experience={item} />)}
       </div>
     </div>
   );
