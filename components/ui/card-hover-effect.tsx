@@ -19,7 +19,7 @@ export const HoverEffect = ({
   return (
     <div
       className={cn(
-        "flex  flex-wrap  ",
+        "flex  flex-wrap gap-2  ",
         className
       )}
     >

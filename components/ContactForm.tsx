@@ -17,11 +17,12 @@ export function ContactForm() {
   };
   return (
     <div 
-     className="w-[850px] max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 border-slate-700 px-8 py-6 md:w-[850px] mx-auto my-16"
-     style={{
-       background:
-         "linear-gradient(180deg, var(--slate-800), var(--slate-900)",
-     }}>
+     className="w-[850px] max-w-full relative rounded-2xl  flex-shrink-0 border-slate-700 px-8 py-6 md:w-[850px] mx-auto my-16"
+    //  style={{
+    //    background:
+    //      "linear-gradient(180deg, var(--slate-800), var(--slate-900)",
+    //  }}
+     >
       <div className="flex flex-col gap-2 items-center">
         <h2 className="font-bold text-xl text-neutral-200">Contact</h2>
         <p className=" text-sm max-w-sm mt-2 text-neutral-300">

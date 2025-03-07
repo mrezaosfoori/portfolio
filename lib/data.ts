@@ -55,3 +55,53 @@ export const skills = [
   { title: "Redux Toolkit", level: "Advanced" },
   { title: "shadcn/ui", level: "Intermediate" },
 ];
+
+export const expriences=[
+  {
+    "logo": "vanda-pardakht-logo.png",
+    "title": "Vanda Pardakht",
+    "position": "Front-End Developer",
+    "rangeTime": "Jan 2024 - PRESENT",
+    "description": "At Vanda Pardakht, a leading financial technology company, I develop and maintain seamless user interfaces for payment gateways and links using React. I leverage advanced tools like React Query and Tailwind CSS to improve development efficiency and collaboration, ensuring robust, secure, and user-centric solutions.",
+    "skills": [
+      "React",
+      "React Query",
+      "Tailwind CSS",
+      "UI/UX Development",
+      "Payment Gateway Integration"
+    ]
+  },
+  {
+    "logo": "cube-company-logo.png",
+    "title": "CubeHouse Company",
+    "position": "Front-End Developer",
+    "rangeTime": "Dec 2022 - Jan 2024",
+    "description": "At Cube Company, I was instrumental in creating a user-friendly website for property viewing and search. Utilizing Next.js alongside an integrated stack including Redux Toolkit, OpenStreetMap, Leaflet, react-hook-form, Yup, Axios, and react-query, I enhanced the platform's functionality and internationalization support to serve consultancy, engineering, and legal services efficiently.",
+    "skills": [
+      "Next.js",
+      "Redux Toolkit",
+      "OpenStreetMap",
+      "Leaflet",
+      "react-hook-form",
+      "Yup",
+      "Axios",
+      "react-query",
+      "Internationalization (i18n)"
+    ]
+  },
+  {
+    "logo": "dorsa-sanat-logo.png",
+    "title": "Dorsa Sanat Tehran",
+    "position": "Front-End Developer",
+    "rangeTime": "Nov 2020 - Sep 2021",
+    "description": "At Dorsa Sanat, I led the redevelopment of the company's source code to boost performance and scalability. My focus on optimization and high-speed performance resulted in significant improvements, ensuring a reliable and fast digital experience for users in economic consultancy and technical services.",
+    "skills": [
+      "Source Code Redevelopment",
+      "Performance Optimization",
+      "Front-End Development",
+      "High-Speed Development",
+      "Code Refactoring"
+    ]
+  }
+]
+

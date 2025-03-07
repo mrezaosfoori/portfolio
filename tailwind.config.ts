@@ -1,12 +1,12 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
- 
+
 const svgToDataUri = require("mini-svg-data-uri");
- 
+
 const colors = require("tailwindcss/colors");
 const {
   default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette");
- 
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -33,7 +33,7 @@ module.exports = {
         },
         blue: {
           "100": "#E4ECFF",
-          "200": "#333E4E",
+          "200": "#99CCFF",
         },
         purple: "#CBACF9",
         border: "hsl(var(--border))",
@@ -102,8 +102,15 @@ module.exports = {
             backgroundPosition: "-200% 0",
           },
         },
+        meteor: {
+          "0%": { transform: "rotate(215deg) translateX(0)", opacity: "1" },
+          "70%": { opacity: "1" },
+          "100%": {
+            transform: "rotate(215deg) translateX(-500px)",
+            opacity: "0",
+          },
+        },
 
-      
         moveHorizontal: {
           "0%": {
             transform: "translateX(-50%) translateY(-10%)",
@@ -144,6 +151,8 @@ module.exports = {
         },
       },
       animation: {
+        "meteor-effect": "meteor 5s linear infinite",
+
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         spotlight: "spotlight 2s ease .75s 1 forwards",
@@ -184,15 +193,14 @@ module.exports = {
       );
     },
   ],
-}
+};
 
- 
 function addVariablesForColors({ addBase, theme }: any) {
   let allColors = flattenColorPalette(theme("colors"));
   let newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
   );
- 
+
   addBase({
     ":root": newVars,
   });
