@@ -105,3 +105,49 @@ export const expriences=[
   }
 ]
 
+
+export const projects=[
+  {
+    "title": "Vanda Pardakht User Panel",
+    "image": "url_to_image",
+    "description": "This project is a comprehensive user interface built for Vanda Pardakht, a cutting-edge financial platform that provides secure and reliable payment solutions. The user panel integrates intuitive navigation with robust functionality, including real-time transaction updates and detailed data analytics to ensure smooth and efficient financial operations. Advanced security protocols and a responsive design make the platform accessible and trustworthy for all users in managing their financial activities.",
+    "skills": ["React", "JavaScript", "CSS", "REST API", "Redux"]
+  },
+  {
+    "title": "Vanda Pardakht Admin Panel",
+    "image": "url_to_image",
+    "description": "The Vanda Pardakht Admin Panel is a sophisticated web dashboard designed specifically for managing financial transactions and system operations. This platform enables efficient oversight through real-time monitoring, comprehensive data visualization, and secure user management tools. It integrates seamlessly with backend services to ensure consistent performance and enhanced security for operational tasks and decision-making processes. Additionally, the panel features customizable modules and a responsive layout, allowing administrators to easily manage large volumes of data and execute tasks with precision and reliability.",
+    "skills": ["React", "JavaScript", "Redux", "Material UI", "REST API"]
+  },
+  {
+    "title": "Speed Wallet",
+    "image": "url_to_image",
+    "description": "Created a high-performance wallet application tailored for freelancers and gig workers, enabling secure and rapid digital transactions. This innovative project integrates real-time updates with user-friendly interfaces and advanced security measures, ensuring efficient financial management for modern professionals. The application supports seamless transfers, quick balance checks, and robust authentication protocols, making it an essential tool for managing daily finances and empowering users to focus on their core creative pursuits to empower success.",
+    "skills": ["React", "TypeScript", "Redux", "Node.js", "Firebase"]
+  },
+  {
+    "title": "Real Estate Website",
+    "image": "url_to_image",
+    "description": "Designed a modern real estate platform using Next.js that offers users a dynamic browsing experience. The website showcases detailed property listings, interactive search filters, and high-quality visuals, all built on a responsive framework that adapts seamlessly to any device. Its integrated mapping and location services, coupled with robust backend support and a focus on user experience, ensure that property seekers can easily navigate, compare, and connect with real estate opportunities in a competitive market.",
+    "skills": ["Next.js", "React", "Tailwind CSS", "Node.js", "MongoDB"]
+  },
+  {
+    "title": "Real Estate Mobile App",
+    "image": "url_to_image",
+    "description": "Developed a mobile application using React Native that transforms real estate browsing into a fully immersive experience. This innovative app integrates interactive maps, personalized property recommendations, and real-time notifications to keep users updated on market trends. The design focuses on intuitive navigation, seamless user interactions, and robust data management, ensuring that property inquiries, listings, and transactions are handled efficiently and securely for a superior mobile experience.",
+    "skills": ["React Native", "Expo", "Firebase", "Redux", "TypeScript"]
+  },
+  {
+    "title": "Payment Mobile App",
+    "image": "url_to_image",
+    "description": "Built a robust mobile payment solution with React Native that guarantees secure and swift transactions for a modern user base. This application offers a streamlined interface combined with advanced security measures and integration with leading payment gateways. The app also features real-time transaction tracking, customizable notifications, and an adaptive design that enhances usability across various devices and network conditions, ensuring a seamless and secure payment experience for all users.",
+    "skills": ["React Native", "Redux", "Node.js", "Stripe API", "Firebase"]
+  },
+  {
+    "title": "Freelance Job Seeking Website",
+    "image": "url_to_image",
+    "description": "Constructed a dynamic job seeking website dedicated to freelancers, offering a comprehensive platform to connect with potential employers. The site features extensive job listings, advanced filtering options, and interactive communication tools that streamline the application process. It is built with a focus on responsive design, seamless integration with backend services, and robust security measures, ensuring a reliable and engaging experience for both job seekers and recruiters throughout every stage of the hiring process.",
+    "skills": ["React", "Next.js", "Tailwind CSS", "Node.js", "MongoDB"]
+  }
+]
+

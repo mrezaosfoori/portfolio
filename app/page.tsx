@@ -5,6 +5,7 @@ import { ContactForm } from "@/components/ContactForm";
 import Exprienceses from "@/components/Exprienceses";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
+import { Projects } from "@/components/Projects";
 import Skills from "@/components/Skills";
 import { Spotlight } from "@/components/ui/Spotlight";
 import { TracingBeam } from "@/components/ui/tracing-beam";
@@ -23,6 +24,7 @@ const Home = () => {
         <Hero />
         <Skills />
         <Exprienceses />
+        <Projects />
         <Comments />
         <hr/>
         <ContactForm />
