@@ -18,7 +18,7 @@ import { useOutsideClick } from "@/hooks/use-outside-click";
 
 type Card = {
   title: string;
-  image: string;
+  src: string;
   description: string;
   skills:string[]
 };

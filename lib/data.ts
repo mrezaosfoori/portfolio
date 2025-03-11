@@ -79,7 +79,7 @@ export const comments = [
 ];
 
 export const skills = [
-  {  title: "React.js", level: "Advanced" },
+  {src: "/images/react.png",  title: "React.js", level: "Advanced" },
   { src: "/images/react-native-1.svg", title: "React Native", level: "Intermediate" },
   { src: "/images/tailwind.png", title: "Tailwind CSS", level: "Advanced" },
   { src: "/images/nextjs-icon-dark-background.png", title: "Next.js App Router", level: "Advanced" },
@@ -145,7 +145,6 @@ export const projects = [
   {
     src: "/images/vanda.png",
     title: "Vanda Pardakht User Panel",
-    image: "url_to_image",
     description:
       "This is a user-friendly interface for Vanda Pardakht, a platform that handles payments safely. It lets users easily see real-time transaction updates and clear reports, and it works well on any device.",
     skills: ["React", "JavaScript", "CSS", "REST API", "Redux"],
@@ -153,7 +152,6 @@ export const projects = [
   {
     src: "/images/wallet.png",
     title: "Shahin Wallet",
-    image: "url_to_image",
     description:
       "This digital wallet makes fast and secure transactions easy. It shows real-time updates, allows seamless money transfers and quick balance checks, and uses strong security features.",
     skills: ["React", "TypeScript", "Redux", "Node.js", "Firebase"],
@@ -161,7 +159,6 @@ export const projects = [
   {
     src: "/images/cubeWesbite.png",
     title: "Cube House",
-    image: "url_to_image",
     description:
       "This is a modern real estate website built with Next.js. Users can browse detailed property listings, use interactive search filters, and view high-quality images on any device with built-in maps.",
     skills: ["Next.js", "React", "Tailwind CSS", "Node.js", "MongoDB"],
@@ -169,7 +166,6 @@ export const projects = [
   {
     src: "/images/payment-app.jpg",
     title: "Payment Mobile App",
-    image: "url_to_image",
     description:
       "This mobile app built with React Native lets users make fast and secure payments. It offers real-time transaction tracking, easy-to-use notifications, and adapts smoothly to any device.",
     skills: ["React Native", "Redux", "Node.js", "Stripe API", "Firebase"],
@@ -177,7 +173,6 @@ export const projects = [
   {
     src: "/images/home-app.jpg",
     title: "Real Estate Mobile App",
-    image: "url_to_image",
     description:
       "This mobile app for real estate, created with React Native, makes finding properties easy. It features interactive maps, personalized recommendations, and real-time alerts for a smooth browsing experience.",
     skills: ["React Native", "Expo", "Firebase", "Redux", "TypeScript"],
@@ -185,7 +180,6 @@ export const projects = [
   {
     src: "/images/job-app.png",
     title: "IranJobs",
-    image: "url_to_image",
     description:
       "This job search website for freelancers provides many job listings, simple search filters, and easy communication tools. It is built to be responsive and secure for both job seekers and recruiters.",
     skills: ["React", "Next.js", "Tailwind CSS", "Node.js", "MongoDB"],
@@ -193,7 +187,6 @@ export const projects = [
   {
     src: "/images/vanda-admin.png",
     title: "Vanda Pardakht Admin Panel",
-    image: "url_to_image",
     description:
       "This admin dashboard for Vanda Pardakht helps manage financial transactions and operations. It offers real-time monitoring, clear data charts, and a secure, easy-to-use layout that works well on any device.",
     skills: ["React", "JavaScript", "Redux", "Material UI", "REST API"],
