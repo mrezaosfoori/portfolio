@@ -234,7 +234,7 @@ export const Card = ({
       <motion.button
         layoutId={layout ? `card-${card.title}` : undefined}
         onClick={handleOpen}
-        className="flex flex-col bg-black border border-gray-800 px-4 py-8  rounded-xl min-w-[450px] min-h-[900px]"
+        className="flex flex-col bg-black border border-gray-800 px-4 py-8  rounded-xl min-w-[450px] min-h-[800px]"
       >
        
           <motion.div
