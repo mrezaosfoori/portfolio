@@ -193,7 +193,7 @@ export const Card = ({
     <>
       <AnimatePresence>
         {open && (
-          <div className="fixed inset-0 h-screen z-50 overflow-auto bg-red-500 p-2">
+          <div className="fixed inset-0 h-screen z-50 overflow-auto  p-4">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -206,12 +206,12 @@ export const Card = ({
               exit={{ opacity: 0 }}
               ref={containerRef}
               layoutId={layout ? `card-${card.title}` : undefined}
-              className="max-w-5xl mx-auto bg-white dark:bg-neutral-900 h-fit  z-[60] my-10 p-4 md:p-10 rounded-3xl font-sans relative"
+              className="max-w-5xl mx-auto bg-white dark:bg-neutral-900 h-fit  z-[60] my-10 p-4 md:p-10 rounded-3xl font-sans flex flex-col"
             >
               <button
                 className="sticky top-4 h-8 w-8 right-0 ml-auto bg-black dark:bg-white rounded-full flex items-center justify-center"
                 onClick={handleClose}
-              >
+              >t
                 <IconX className="h-6 w-6 text-neutral-100 dark:text-neutral-900" />
               </button>
               <motion.p
@@ -234,28 +234,33 @@ export const Card = ({
       <motion.button
         layoutId={layout ? `card-${card.title}` : undefined}
         onClick={handleOpen}
-        className="rounded-3xl bg-black dark:bg-neutral-900 h-60 w-56 md:h-[30rem] md:w-96 overflow-hidden flex flex-col items-start justify-start relative z-10"
+        className="flex flex-col bg-black border border-gray-800 px-4 py-8  rounded-xl min-w-[450px] min-h-[900px]"
       >
-        <div className="absolute h-full top-0 inset-x-0 bg-gradient-to-b from-black/50 via-transparent to-transparent z-30 pointer-events-none" />
-        <div className="relative z-40 p-8  h-full">
+       
+          <motion.div
+            layoutId={layout ? `title-${card.title}` : undefined}
+            className=""
+          >
+            <img src={card.src} className=" min-w-[430px] h-[500px]  object-fill mx-auto  rounded-xl " alt="" />
+          </motion.div>
         
           <motion.p
             layoutId={layout ? `title-${card.title}` : undefined}
-            className="text-white text-xl md:text-3xl font-semibold max-w-xs text-left [text-wrap:balance] font-sans mt-2"
+            className="text-white text-xl md:text-3xl font-semibold max-w-xl text-left [text-wrap:balance] font-sans mt-2 line-clamp-1 mb-4"
           >
             {card.title}
           </motion.p>
           <motion.p
             layoutId={layout ? `title-${card.title}` : undefined}
-            className="text-slate-300 text-[13px] text-start [text-wrap:balance] font-sans mt-2"
+            className="text-slate-300 text-[14px] text-start [text-wrap:balance] font-sans mt-2"
           >
             {card.description}
           </motion.p>
           <motion.div
             layoutId={layout ? `title-${card.title}` : undefined}
-            className="text-slate-700 text-[9px] [text-wrap:balance] font-sans absolute bottom-1"
+            className="text-slate-700 text-[11px] [text-wrap:balance] font-sans mt-auto "
           >
-            <div className="flex flex-wrap gap-2 mb-4 relative z-50 mt-auto ">
+            <div className="flex flex-wrap gap-2  ">
               {card.skills.map((skill: string, index: number) => (
                 <span
                   key={index}
@@ -266,43 +271,9 @@ export const Card = ({
               ))}
             </div>
           </motion.div>
-        </div>
-        {/* <BlurImage
-          src={card.src}
-          alt={card.title}
-          fill
-          className="object-cover absolute z-10 inset-0"
-        /> */}
+       
       </motion.button>
     </>
   );
 };
 
-export const BlurImage = ({
-  height,
-  width,
-  src,
-  className,
-  alt,
-  ...rest
-}: ImageProps) => {
-  const [isLoading, setLoading] = useState(true);
-  return (
-    <Image
-      className={cn(
-        "transition duration-300",
-        isLoading ? "blur-sm" : "blur-0",
-        className
-      )}
-      onLoad={() => setLoading(false)}
-      src={src}
-      width={width}
-      height={height}
-      loading="lazy"
-      decoding="async"
-      blurDataURL={typeof src === "string" ? src : undefined}
-      alt={alt ? alt : "Background of a beautiful view"}
-      {...rest}
-    />
-  );
-};
