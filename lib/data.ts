@@ -1,3 +1,38 @@
+import images from "./images";
+export const navItems=[
+  {
+    name: "Home",
+    link: "/",
+    // icon: <IconHome className="h-4 w-4 text-neutral-500 dark:text-white" />,
+  },
+  {
+    name: "Skills",
+    link: "#skills",
+    // icon: <IconUser className="h-4 w-4 text-neutral-500 dark:text-white" />,
+  },
+  {
+    name: "Experiences",
+    link: "#experiences",
+    // icon: <IconUser className="h-4 w-4 text-neutral-500 dark:text-white" />,
+  },
+  {
+    name: "Projects",
+    link: "#projects",
+    // icon: <IconUser className="h-4 w-4 text-neutral-500 dark:text-white" />,
+  },
+  {
+    name: "Comments",
+    link: "#comments",
+    // icon: <IconUser className="h-4 w-4 text-neutral-500 dark:text-white" />,
+  },
+  {
+    name: "Contact",
+    link: "#contact",
+    // icon: (
+    //   <IconMessage className="h-4 w-4 text-neutral-500 dark:text-white" />
+    // ),
+  },
+]
 export const comments = [
   {
     quote:
@@ -44,16 +79,16 @@ export const comments = [
 ];
 
 export const skills = [
-  { title: "React.js", level: "Advanced" },
-  { title: "React Native", level: "Intermediate" },
-  { title: "Tailwind CSS", level: "Advanced" },
-  { title: "Next.js App Router", level: "Advanced" },
-  { title: "TypeScript", level: "Advanced" },
-  { title: "React Hook Form", level: "Advanced" },
-  { title: "Zod", level: "Intermediate" },
-  { title: "React Query", level: "Advanced" },
-  { title: "Redux Toolkit", level: "Advanced" },
-  { title: "shadcn/ui", level: "Intermediate" },
+  { src: "/images/react.png", title: "React.js", level: "Advanced" },
+  { src: "/images/react-native-1.svg", title: "React Native", level: "Intermediate" },
+  { src: "/images/tailwind.png", title: "Tailwind CSS", level: "Advanced" },
+  { src: "/images/nextjs-icon-dark-background.png", title: "Next.js App Router", level: "Advanced" },
+  { src: "/images/typescript.jpg", title: "TypeScript", level: "Advanced" },
+  { src: "/images/react-hook-form.png", title: "React Hook Form", level: "Advanced" },
+  { src: "/images/zod.png", title: "Zod", level: "Intermediate" },
+  { src: "/images/redux-toolkit.jpg", title: "React Query", level: "Advanced" },
+  { src: "/images/redux-toolkit.jpg", title: "Redux Toolkit", level: "Advanced" },
+  { src: "/images/shadcn.jpg", title: "shadcn/ui", level: "Intermediate" },
 ];
 
 export const expriences=[

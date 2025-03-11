@@ -234,16 +234,11 @@ export const Card = ({
       <motion.button
         layoutId={layout ? `card-${card.title}` : undefined}
         onClick={handleOpen}
-        className="rounded-3xl bg-black dark:bg-neutral-900 h-80 w-56 md:h-[40rem] md:w-96 overflow-hidden flex flex-col items-start justify-start relative z-10"
+        className="rounded-3xl bg-black dark:bg-neutral-900 h-60 w-56 md:h-[30rem] md:w-96 overflow-hidden flex flex-col items-start justify-start relative z-10"
       >
         <div className="absolute h-full top-0 inset-x-0 bg-gradient-to-b from-black/50 via-transparent to-transparent z-30 pointer-events-none" />
-        <div className="relative z-40 p-8">
-          <motion.p
-            layoutId={layout ? `category-${card.category}` : undefined}
-            className="text-white text-sm md:text-base font-medium font-sans text-left"
-          >
-            {card.image}
-          </motion.p>
+        <div className="relative z-40 p-8  h-full">
+        
           <motion.p
             layoutId={layout ? `title-${card.title}` : undefined}
             className="text-white text-xl md:text-3xl font-semibold max-w-xs text-left [text-wrap:balance] font-sans mt-2"
@@ -252,13 +247,13 @@ export const Card = ({
           </motion.p>
           <motion.p
             layoutId={layout ? `title-${card.title}` : undefined}
-            className="text-slate-700 text-[13px] [text-wrap:balance] font-sans mt-2"
+            className="text-slate-300 text-[13px] text-start [text-wrap:balance] font-sans mt-2"
           >
             {card.description}
           </motion.p>
-          <motion.p
+          <motion.div
             layoutId={layout ? `title-${card.title}` : undefined}
-            className="text-slate-700 text-[9px] [text-wrap:balance] font-sans mt-2"
+            className="text-slate-700 text-[9px] [text-wrap:balance] font-sans absolute bottom-1"
           >
             <div className="flex flex-wrap gap-2 mb-4 relative z-50 mt-auto ">
               {card.skills.map((skill: string, index: number) => (
@@ -270,7 +265,7 @@ export const Card = ({
                 </span>
               ))}
             </div>
-          </motion.p>
+          </motion.div>
         </div>
         {/* <BlurImage
           src={card.src}

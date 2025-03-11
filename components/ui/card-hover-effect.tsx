@@ -8,6 +8,7 @@ export const HoverEffect = ({
   className,
 }: {
   items: {
+    src: string;
     title: string;
     level: string;
 
@@ -19,7 +20,7 @@ export const HoverEffect = ({
   return (
     <div
       className={cn(
-        "flex  flex-wrap gap-2  ",
+        "flex  flex-wrap gap-2   ",
         className
       )}
     >
@@ -49,8 +50,13 @@ export const HoverEffect = ({
             )}
           </AnimatePresence>
           <Card>
-            <CardTitle>{item.title}</CardTitle>
-            <CardDescription>{item.level}</CardDescription>
+          <div className="flex items-center gap-3">
+              <CardLogo>{item.src}</CardLogo>
+             <div className="flex flex-col">
+               <CardTitle>{item.title}</CardTitle>
+               <CardDescription>{item.level}</CardDescription>
+             </div>
+          </div>
           </Card>
         </Link>
       ))}
@@ -76,6 +82,17 @@ export const Card = ({
         <div className="p-1">{children}</div>
       </div>
     </div>
+  );
+};
+export const CardLogo = ({
+  className,
+  children,
+}: {
+  className?: string;
+  children: React.ReactNode;
+}) => {
+  return (
+    <img src={children} alt="*" className="w-8 h-8 shadow-xl bg-black-200 rounded-md"/>
   );
 };
 export const CardTitle = ({

@@ -11,7 +11,7 @@ const Skills = () => {
         Skills
       </h2>
 
-      <div className="w-fit mx-auto felx gap-2">
+      <div className="w-fit mx-auto felx gap-2  max-w-[90%]">
         <HoverEffect items={skills} />
       </div>
     </div>

@@ -19,7 +19,7 @@ const CustomCard = ({
           </div>
           <div>
             <p className="text-white">{title}</p>
-            <p className="text-gray-500">{decription}</p>
+            <p className="text-slate-300">{decription}</p>
           </div>
         </div>
       </div>
