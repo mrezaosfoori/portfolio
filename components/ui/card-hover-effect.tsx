@@ -11,19 +11,13 @@ export const HoverEffect = ({
     src: string;
     title: string;
     level: string;
-
   }[];
   className?: string;
 }) => {
   let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <div
-      className={cn(
-        "flex  flex-wrap gap-2   ",
-        className
-      )}
-    >
+    <div className={cn("flex  flex-wrap gap-2   ", className)}>
       {items.map((item, idx) => (
         <Link
           href={item?.title}
@@ -50,13 +44,13 @@ export const HoverEffect = ({
             )}
           </AnimatePresence>
           <Card>
-          <div className="flex items-center gap-3">
-              <CardLogo>{item.src}</CardLogo>
-             <div className="flex flex-col">
-               <CardTitle>{item.title}</CardTitle>
-               <CardDescription>{item.level}</CardDescription>
-             </div>
-          </div>
+            <div className="flex items-center gap-3">
+              <CardLogo src={item.src}/>
+              <div className="flex flex-col">
+                <CardTitle>{item.title}</CardTitle>
+                <CardDescription>{item.level}</CardDescription>
+              </div>
+            </div>
           </Card>
         </Link>
       ))}
@@ -84,15 +78,13 @@ export const Card = ({
     </div>
   );
 };
-export const CardLogo = ({
-  className,
-  children,
-}: {
-  className?: string;
-  children: React.ReactNode;
-}) => {
+export const CardLogo = ({ src }: { src?: string }) => {
   return (
-    <img src={children} alt="*" className="w-8 h-8 shadow-xl bg-black-200 rounded-md"/>
+    <img
+      src={src}
+      alt="*"
+      className="w-8 h-8 shadow-xl bg-black-200 rounded-md"
+    />
   );
 };
 export const CardTitle = ({

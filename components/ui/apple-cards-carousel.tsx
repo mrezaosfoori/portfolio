@@ -17,10 +17,10 @@ import Image, { ImageProps } from "next/image";
 import { useOutsideClick } from "@/hooks/use-outside-click";
 
 type Card = {
-  src: string;
   title: string;
-  category: string;
-  content: React.ReactNode;
+  image: string;
+  description: string;
+  skills:string[]
 };
 
 export const CarouselContext = createContext<{
@@ -103,7 +103,7 @@ export const Carousel = ({ items, initialScroll = 0 }: any) => {
               "" // remove max-w-4xl if you want the carousel to span the full width of its container
             )}
           >
-            {items.map((item, index) => (
+            {items.map((item:any, index:number) => (
               <motion.div
                 initial={{
                   opacity: 0,
@@ -218,7 +218,7 @@ export const Card = ({
                 layoutId={layout ? `category-${card.title}` : undefined}
                 className="text-base font-medium text-black dark:text-white"
               >
-                {card.category}
+                {card.title}
               </motion.p>
               <motion.p
                 layoutId={layout ? `title-${card.title}` : undefined}
@@ -226,7 +226,7 @@ export const Card = ({
               >
                 {card.title}
               </motion.p>
-              <div className="py-10">{card.content}</div>
+              <div className="py-10">{card.description}</div>
             </motion.div>
           </div>
         )}
