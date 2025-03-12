@@ -55,7 +55,7 @@ export const FloatingNav = ({
           duration: 0.2,
         }}
         className={cn(
-          "flex max-w-fit  fixed top-10 inset-x-0 mx-auto border border-white p-2 gap-2 rounded-xl text-white bg-black z-[9999]",
+          "flex max-w-fit  fixed top-10 inset-x-0 mx-auto border border-white p-2 gap-2 rounded-xl text-white bg-black z-[8999]",
           className
         )}
       >

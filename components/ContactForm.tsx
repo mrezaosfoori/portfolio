@@ -9,11 +9,12 @@ import {
   IconBrandOnlyfans,
 } from "@tabler/icons-react";
 import CustomCard from "./ui/custom-card";
+import { toast } from "react-toastify";
 
 export function ContactForm() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Form submitted");
+    toast.success("your message is sent.thanks")
   };
   return (
     <div 

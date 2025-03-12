@@ -3,12 +3,14 @@ import { Inter } from "next/font/google";
 
 import "./globals.css";
 import { ThemeProvider } from "./provider";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Mohammad Reza Osfoori Portfolio",
-  description: "Modern & Minimal JS Mastery Portfolio",
+  description: "Front End Portfolio Created By Mohammadreza Osfoori",
 };
 
 export default function RootLayout({
@@ -30,6 +32,7 @@ export default function RootLayout({
         >
           {children}
         </ThemeProvider>
+        <ToastContainer/>
       </body>
     </html>
   );

@@ -1,9 +1,9 @@
 import React from "react";
-import { Spotlight } from "./ui/Spotlight";
-import { ShimmerCard } from "./ui/ShimmerCard";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
 import Image from "next/image";
 import images from "@/lib/images";
+import Popup from 'reactjs-popup';
+import HireMeButton from "./HireMeButton";
 
 function Hero() {
   return (
@@ -13,7 +13,7 @@ function Hero() {
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_10%,white)]"></div>
 
         <div className=" flex   w-[90%]  ">
-          <section className="flex-3 flex flex-col  opacity-95 z-[9999]">
+          <section className="flex-3 flex flex-col  opacity-95 ">
             <p className="text-[20px] text-white">Welcome</p>
             <TextGenerateEffect
               words="I am a web designer and front-end deveolper"
@@ -30,9 +30,7 @@ function Hero() {
               <button className="border-[4px] border-blue-400 text-blue-400 px-6 py-3 rounded-xl text-[18px] hover:bg-blue-400 hover:text-white transition">
                 About Me
               </button>
-              <button className="bg-blue-400 border-[4px] border-blue-400 text-white px-6 py-3 rounded-xl text-[18px] hover:bg-transparent hover:text-blue-400 transition">
-                Hire Me
-              </button>
+           <HireMeButton/>
             </div>
           </section>
 
